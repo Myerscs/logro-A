@@ -37,3 +37,24 @@ function eliminarRegistro(button) {
     const row = button.parentNode.parentNode;
     row.parentNode.removeChild(row);
 }
+function buscarNombre() {
+    const nombreBuscado = document.getElementById("nombreBuscar").value.toLowerCase();
+    const filas = document.querySelectorAll("#registroTabla tr");
+
+    let encontrado = false;
+
+    filas.forEach((fila) => {
+        const nombreCelda = fila.cells[0].innerText.toLowerCase();
+        
+        if (nombreCelda.includes(nombreBuscado)) {
+            fila.style.display = ""; 
+            encontrado = true;
+        } else {
+            fila.style.display = "none"; 
+        }
+    });
+
+    if (!encontrado) {
+        alert("No se encontraron resultados para: " + nombreBuscado + " 😢");
+    }
+}
