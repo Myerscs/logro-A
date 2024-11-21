@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Información &#128520</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gestor de Contatos</h2>
+        <div class="form-container">
+            <div class="input-group">
+                <label for="nombre">NOMBRE COMPLETOS:</label>
+                <input type="text" id="nombre">
+            </div>
+            <div class="input-group">
+                <label for="cedula">NUMERO DE TELEFONO:</label>
+                <input type="text" id="numero">
+            </div>
+            <div class="input-group">
+                <label for="cedula">CORREO ELECTRONICO:</label>
+                <input type="text" id="correo">
+            </div>
+            <div class="input-group">
+                <label for="etiqueta">ETIQUETA:</label>
+                <select id="etiqueta">
+                    <option value="Amigo">Amigo</option>
+                    <option value="Familia">Familia</option>
+                    <option value="Vecinos">Vecinos</option>
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+            <button onclick="guardarRegistro()">GUARDAR</button>
+            <div class="info-box">
+                <p>&#128520 Real Hasta la Muerte &#128520 </p>
+            </div>
+            <div class="BotonBuscar">
+                <h3>Buscar por nombre</h3>
+                <input type="text" id="nombreBuscar" placeholder="Nombre">
+                <button onclick="buscarNombre()">Buscar</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>NOMBRES COMPLETOS</th>
+                    <th>NUMERO DE TELEFONO</th>
+                    <th>CORREO ELECTRONICO</th>
+                    <th>ETIQUETA</th>
+                    <th>ACCION</th>
+                </tr>
+            </thead>
+            <tbody id="registroTabla">
+        
+                <tr>
+                    <td>Alfonso Tomás Loor Vera</td>
+                    <td>23123123</td>
+                    <td>alfonsoloor@espam.edu.ec</td>
+                    <td>trabajo</td>
+                    <td><button onclick="eliminarRegistro(this)">Eliminar</button> - <button onclick="editarRegistro(this)">Editar</button></td>
+                </tr>
+                <tr>
+                    <td>Alexi Alejandro Cevallos Santana</td>
+                    <td>12345678</td>
+                    <td>alexicevallos@espam.edu.ec</td>
+                    <td>familia</td>
+                    <td><button onclick="eliminarRegistro(this)">Eliminar</button> - <button onclick="editarRegistro(this)">Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
