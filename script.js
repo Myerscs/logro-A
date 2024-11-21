@@ -33,3 +33,7 @@ function editarRegistro(button) {
 
     row.parentNode.removeChild(row);
 }
+function eliminarRegistro(button) {
+    const row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
